@@ -10,26 +10,31 @@ import UIKit
 
 class EnterBodyInfoViewController: UIViewController {
 
+    @IBOutlet weak var heightField: UITextField!
+    @IBOutlet weak var weightField: UITextField!
+    @IBOutlet weak var bpmField: UITextField!
+    
+    
+    var textFields = [UITextField]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFields = [heightField, weightField, bpmField]
+        for textField in textFields {
+            textField.keyboardType = .numberPad
+        }
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func nextButt(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set(heightField.text, forKey: "height")
+        defaults.set(weightField.text, forKey: "weight")
+        defaults.set(bpmField.text, forKey: "restingHR")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -43,13 +43,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>firstEmergencyContact</key>
-	<string>0</string>
 	<key>firstTimeOpened</key>
 	<true/>
+	<key>firstEmergencyContact</key>
+	<string>0</string>
 	<key>secondEmergencyContact</key>
 	<string>0</string>
 	<key>thirdEmergencyContact</key>
+	<string>0</string>
+	<key>height</key>
+	<string>0</string>
+	<key>weight</key>
+	<string>0</string>
+	<key>restingHR</key>
+	<integer>0</integer>
+	<key>sex</key>
 	<string>0</string>
 </dict>
 </plist>
