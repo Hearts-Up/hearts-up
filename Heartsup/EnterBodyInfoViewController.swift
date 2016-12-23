@@ -3,7 +3,7 @@
 //  Heartsup
 //
 //  Created by Elijah Smith on 12/16/16.
-//  Copyright © 2016 James Randolph. All rights reserved.
+//  Copyright © 2016 HeartsUp. All rights reserved.
 //
 
 import UIKit

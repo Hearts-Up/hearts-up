@@ -2,8 +2,8 @@
 //  PreferencesViewController.swift
 //  Heartsup
 //
-//  Created by James Randolph on 12/10/16.
-//  Copyright © 2016 James Randolph. All rights reserved.
+//  Created by Elijah Smith on 12/10/16.
+//  Copyright © 2016 HeartsUp. All rights reserved.
 //
 
 import UIKit
