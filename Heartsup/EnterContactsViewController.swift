@@ -26,7 +26,10 @@ class EnterContactsViewController: ViewController {
     @IBAction func okPressed(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.set(firstContactField.text, forKey: "firstEmergencyContact")
+        print(defaults.string(forKey: "firstEmergencyContact")!)
         defaults.set(secondContactField.text, forKey: "secondEmergencyContact")
+        print(defaults.string(forKey: "secondEmergencyContact")!)
         defaults.set(thirdContactField.text, forKey: "thirdEmergencyContact")
+        print(defaults.string(forKey: "thirdEmergencyContact")!)
     }
 }

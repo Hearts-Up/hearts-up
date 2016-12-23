@@ -14,17 +14,22 @@ class SexSelectViewController: UIViewController {
     @IBAction func segSex(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             defaults.set(true, forKey: "isMale")
+            print(defaults.string(forKey: "isMale")!)
             defaults.set("Male", forKey: "sex")
+            print(defaults.string(forKey: "sex")!)
         }
         else {
             defaults.set(false, forKey: "isMale")
+            print(defaults.string(forKey: "isMale")!)
             defaults.set("Female", forKey: "sex")
+            print(defaults.string(forKey: "sex")!)
         }
     }
     
     @IBAction func setupDoneButton(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.set(false, forKey: "firstTimeOpened")
+        print(defaults.string(forKey: "firstTimeOpened")!)
     }
 
     override func viewDidLoad() {

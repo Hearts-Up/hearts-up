@@ -26,11 +26,15 @@ class EnterBodyInfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func nextButt(_ sender: Any) {
+    @IBAction func buttonNext(_ sender: Any) {
         let defaults = UserDefaults.standard
+        print("hi")
         defaults.set(heightField.text, forKey: "height")
+        print(defaults.string(forKey: "height")!)
         defaults.set(weightField.text, forKey: "weight")
+        print(defaults.string(forKey: "weight")!)
         defaults.set(bpmField.text, forKey: "restingHR")
+        print(defaults.string(forKey: "restingHR")!)
     }
 
     override func didReceiveMemoryWarning() {

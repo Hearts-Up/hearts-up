@@ -265,24 +265,23 @@
                                     <constraint firstAttribute="width" constant="30" id="dlI-3G-qfz"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-1v-NpL">
-                                <rect key="frame" x="167.5" y="456" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyR-W4-Uee">
+                                <rect key="frame" x="168" y="456" width="40" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="GTp-jT-PfW"/>
-                                    <constraint firstAttribute="height" constant="30" id="tXu-tN-15K"/>
+                                    <constraint firstAttribute="height" constant="30" id="6tH-to-ASe"/>
+                                    <constraint firstAttribute="width" constant="40" id="foT-My-hns"/>
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="dL5-DZ-3CQ" kind="show" id="o8G-40-FUw"/>
+                                    <action selector="buttonNext:" destination="ten-Ba-48C" eventType="touchUpInside" id="Fzo-hY-FcP"/>
+                                    <segue destination="dL5-DZ-3CQ" kind="show" id="wp5-iA-Mg2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.41127970809999997" green="0.74659711120000005" blue="0.81577914949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="T5m-wY-tLb" firstAttribute="top" secondItem="8jq-ge-YoY" secondAttribute="bottom" constant="40" id="2Hy-FR-phL"/>
-                            <constraint firstItem="lvz-1v-NpL" firstAttribute="centerX" secondItem="rul-Vh-6fL" secondAttribute="centerX" id="53Q-1w-u40"/>
                             <constraint firstItem="mpM-QJ-BBQ" firstAttribute="centerX" secondItem="rul-Vh-6fL" secondAttribute="centerX" id="7fx-MH-Rpg"/>
-                            <constraint firstItem="lvz-1v-NpL" firstAttribute="top" secondItem="p1x-sx-SQh" secondAttribute="bottom" constant="5" id="DjC-SQ-pFu"/>
                             <constraint firstItem="Bjh-cI-qqL" firstAttribute="centerX" secondItem="rul-Vh-6fL" secondAttribute="centerX" id="HKd-tk-TfP"/>
                             <constraint firstItem="Oj5-Tr-55Y" firstAttribute="top" secondItem="T5m-wY-tLb" secondAttribute="bottom" constant="20" id="Np3-zU-aS1"/>
                             <constraint firstItem="Oj5-Tr-55Y" firstAttribute="centerX" secondItem="rul-Vh-6fL" secondAttribute="centerX" id="QIj-wT-Ca5"/>
@@ -293,8 +292,10 @@
                             <constraint firstItem="p1x-sx-SQh" firstAttribute="centerX" secondItem="rul-Vh-6fL" secondAttribute="centerX" id="Zhe-2T-iTz"/>
                             <constraint firstItem="mpM-QJ-BBQ" firstAttribute="top" secondItem="Oj5-Tr-55Y" secondAttribute="bottom" constant="40" id="fft-JH-JIg"/>
                             <constraint firstItem="T5m-wY-tLb" firstAttribute="centerX" secondItem="rul-Vh-6fL" secondAttribute="centerX" id="fhT-Dk-jz1"/>
+                            <constraint firstItem="OyR-W4-Uee" firstAttribute="top" secondItem="p1x-sx-SQh" secondAttribute="bottom" constant="5" id="kMx-xB-xHr"/>
                             <constraint firstItem="T2K-5t-obt" firstAttribute="top" secondItem="p1x-sx-SQh" secondAttribute="bottom" constant="5" id="nwq-Mm-iFC"/>
                             <constraint firstItem="p1x-sx-SQh" firstAttribute="top" secondItem="s8s-39-je9" secondAttribute="bottom" constant="10" id="rA4-dl-8xS"/>
+                            <constraint firstItem="OyR-W4-Uee" firstAttribute="centerX" secondItem="rul-Vh-6fL" secondAttribute="centerX" id="tDH-Cd-Hg4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -755,6 +756,6 @@
         <image name="More_Info" width="173" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xYy-sE-UxG"/>
+        <segue reference="YiY-lD-uSr"/>
     </inferredMetricsTieBreakers>
 </document>
