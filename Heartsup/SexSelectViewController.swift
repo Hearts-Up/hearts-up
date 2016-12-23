@@ -28,7 +28,7 @@ class SexSelectViewController: UIViewController {
     
     @IBAction func setupDoneButton(_ sender: Any) {
         let defaults = UserDefaults.standard
-        defaults.set(false, forKey: "firstTimeOpened")
+        defaults.set(true, forKey: "firstTimeOpened")
         print(defaults.string(forKey: "firstTimeOpened")!)
     }
 

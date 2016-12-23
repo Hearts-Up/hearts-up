@@ -18,13 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Determines which view controller to present on application launch
         let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "firstTimeOpened")       // <-- delete eventually
+        //defaults.set(true, forKey: "firstTimeOpened")       // <-- delete eventually
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var controller: UIViewController
+        print(defaults.bool(forKey: "firstTimeOpened"))
         if defaults.bool(forKey: "firstTimeOpened") {
-            controller = storyboard.instantiateViewController(withIdentifier: "firstTimeSetupScreen")
-        } else {
             controller = storyboard.instantiateViewController(withIdentifier: "mainScreen")
+        } else {
+            controller = storyboard.instantiateViewController(withIdentifier: "firstTimeSetupScreen")
         }
         self.window?.rootViewController = controller
         self.window?.makeKeyAndVisible()
