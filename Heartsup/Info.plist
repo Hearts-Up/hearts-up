@@ -52,11 +52,13 @@
 	<key>thirdEmergencyContact</key>
 	<string>0</string>
 	<key>height</key>
-	<string>0</string>
+	<integer>0</integer>
 	<key>weight</key>
-	<string>0</string>
+	<integer>0</integer>
 	<key>restingHR</key>
 	<integer>0</integer>
+	<key>isMale</key>
+	<true/>
 	<key>sex</key>
 	<string>0</string>
 </dict>

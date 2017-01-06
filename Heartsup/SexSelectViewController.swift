@@ -12,16 +12,16 @@ class SexSelectViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     @IBAction func segSex(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            defaults.set(true, forKey: "isMale")
-            print(defaults.string(forKey: "isMale")!)
-            defaults.set("Male", forKey: "sex")
-            print(defaults.string(forKey: "sex")!)
-        }
-        else {
+        if sender.selectedSegmentIndex == 1 {
             defaults.set(false, forKey: "isMale")
             print(defaults.string(forKey: "isMale")!)
             defaults.set("Female", forKey: "sex")
+            print(defaults.string(forKey: "sex")!)
+        }
+        else {
+            defaults.set(true, forKey: "isMale")
+            print(defaults.string(forKey: "isMale")!)
+            defaults.set("Male", forKey: "sex")
             print(defaults.string(forKey: "sex")!)
         }
     }
