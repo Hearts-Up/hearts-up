@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class PreferencesViewController: UIViewController {
+class PreferencesViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 
     @IBOutlet weak var firstContactLabel: UILabel!
     @IBOutlet weak var secondContactLabel: UILabel!
@@ -18,6 +19,7 @@ class PreferencesViewController: UIViewController {
     @IBOutlet weak var hrLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
     
+    var contactList = [UserDefaults.standard]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,5 +101,32 @@ class PreferencesViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
    
+    @IBAction func textMessageGenerator(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = "Help! I've fallen and I can't get up!"
+            controller.recipients = [defaults.string(forKey: "firstEmergencyContact")!, defaults.string(forKey: "secondEmergencyContact")!, defaults.string(forKey: "thirdEmergencyContact")!]
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+            
+        }
+    }
+   
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    @IBAction func quitAppPlease(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: "firstTimeOpened")
+        print(defaults.bool(forKey: "firstTimeOpened"))
+        print("Quitting App...")
+        exit(0)
+    }
     
 }
